@@ -54,7 +54,6 @@
                 {
                     Console.Write(snakeMoves[i, j]);
                 }
-
                 Console.WriteLine();
             }
         }
