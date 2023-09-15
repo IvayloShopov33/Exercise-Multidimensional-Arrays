@@ -29,13 +29,11 @@
                     if (matrix[row, col + 1] == character && matrix[row + 1, col] == character &&
                         matrix[row + 1, col + 1] == character)
                     {
-                        //increase the counter if they are the same
                         squaresOfEqualChars++;
                     }
                 }
             }
-
-            //print the counter
+            
             Console.WriteLine(squaresOfEqualChars);
         }
     }
