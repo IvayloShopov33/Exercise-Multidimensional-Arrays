@@ -26,7 +26,6 @@
                 //check the type of the command and also if it is valid or not
                 if (commands[0] == "END")
                 {
-                    //stop the program
                     break;
                 }
                 else if (commands[0] == "swap" && commands.Length==5)
@@ -36,6 +35,7 @@
                     int col1 = int.Parse(commands[2]);
                     int row2 = int.Parse(commands[3]);
                     int col2 = int.Parse(commands[4]);
+                    
                     //check if the coordinates are valid or not
                     if (row1 >= 0 && row1 < matrix.GetLength(0) && col1 >= 0 && col1 < matrix.GetLength(1) &&
                         row2 >= 0 && row2 < matrix.GetLength(0) && col2 >= 0 && col2 < matrix.GetLength(1))
@@ -43,6 +43,7 @@
                         string firstElement = matrix[row1, col1];
                         matrix[row1, col1] = matrix[row2, col2];
                         matrix[row2, col2] = firstElement;
+                        
                         //print the state of the matrix
                         for (int row = 0; row < matrix.GetLength(0); row++)
                         {
