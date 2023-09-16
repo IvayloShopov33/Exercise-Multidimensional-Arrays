@@ -39,7 +39,7 @@
                 }
             }
 
-            //execute commands (add, subtract and end)
+            //execute commands (add, subtract or end)
             string[] commands;
             while (true)
             {
