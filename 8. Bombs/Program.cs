@@ -16,17 +16,20 @@
                     matrix[row, col] = numbers[col];
                 }
             }
+            
             string[] coordinatesOfTheBombs = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < coordinatesOfTheBombs.Length; i++)
             {
                 int[] coordinates = coordinatesOfTheBombs[i].Split(',').Select(int.Parse).ToArray();
                 int row = coordinates[0];
                 int col = coordinates[1];
+                
                 //check if the bomb can explode
                 if (matrix[row, col] > 0)
                 {
                     int bomb = matrix[row, col];
                     matrix[row, col] = 0;
+                    
                     //check where exactly the bomb is and decrease the value of the cells arount it
                     if (row > 0 && row < matrix.GetLength(0) - 1 && col > 0 && col < matrix.GetLength(1) - 1)
                     {
@@ -193,7 +196,7 @@
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     Console.Write(matrix[row, col] + " ");
-                }
+                }              
                 Console.WriteLine();
             }
         }
