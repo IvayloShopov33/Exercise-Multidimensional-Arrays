@@ -82,7 +82,7 @@
                     }
                 }
 
-                //check if still there are knights which can attack each other
+                //check if there are knights which can attack each other
                 if (maxAttacks == 0)
                 {
                     //print the count of the removed knights and stop the program
