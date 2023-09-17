@@ -17,6 +17,7 @@
                 {
                     //put the elements in the matrix
                     matrix[row, col] = input[col];
+                    
                     //check if the current element is the player
                     if (matrix[row, col] == 'P')
                     {
@@ -31,6 +32,7 @@
             {
                 int nextRow = 0;
                 int nextCol = 0;
+                
                 //check the direction
                 switch (direction)
                 {
@@ -52,6 +54,7 @@
 
                 bool hasWon = false;
                 bool isDead = false;
+                
                 //remove the player from his current position
                 matrix[playerRow, playerCol] = '.';
                 //check if the player is outside of the matrix and if it is true than he has won the game
@@ -63,6 +66,7 @@
                 {
                     playerRow += nextRow;
                     playerCol += nextCol;
+                    
                     //check if the player reached a bunny or not
                     if (matrix[playerRow, playerCol] == 'B')
                     {
@@ -100,6 +104,7 @@
                         {
                             isDead = true;
                         }
+                        
                         matrix[bunnyRow + 1, bunnyCol] = 'B';
                     }
 
@@ -111,6 +116,7 @@
                         {
                             isDead = true;
                         }
+                        
                         matrix[bunnyRow - 1, bunnyCol] = 'B';
                     }
 
@@ -122,6 +128,7 @@
                         {
                             isDead = true;
                         }
+                        
                         matrix[bunnyRow, bunnyCol + 1] = 'B';
                     }
 
@@ -133,6 +140,7 @@
                         {
                             isDead = true;
                         }
+                        
                         matrix[bunnyRow, bunnyCol - 1] = 'B';
                     }
                 }
@@ -146,7 +154,6 @@
                         {
                             Console.Write(matrix[row, col]);
                         }
-
                         Console.WriteLine();
                     }
 
@@ -163,7 +170,6 @@
                         {
                             Console.Write(matrix[row, col]);
                         }
-
                         Console.WriteLine();
                     }
 
