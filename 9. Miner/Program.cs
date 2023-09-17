@@ -40,7 +40,7 @@
                 string currentCommand = commands[i];
                 if (currentCommand == "up")
                 {
-                    //check if the next move is outside of the matrix
+                    //check if the next move is inside of the matrix
                     if (startingRow - 1 >= 0)
                     {
                         startingRow--;
@@ -49,7 +49,7 @@
                 }
                 else if (currentCommand == "down")
                 {
-                    //check if the next move is outside of the matrix
+                    //check if the next move is inside of the matrix
                     if (startingRow + 1 < minerGame.GetLength(0))
                     {
                         startingRow++;
@@ -58,7 +58,7 @@
                 }
                 else if (currentCommand == "left")
                 {
-                    //check if the next move is outside of the matrix
+                    //check if the next move is inside of the matrix
                     if (startingColumn - 1 >= 0)
                     {
                         startingColumn--;
@@ -67,7 +67,7 @@
                 }
                 else if (currentCommand == "right")
                 {
-                    //check if the next move is outside of the matrix
+                    //check if the next move is inside of the matrix
                     if (startingColumn + 1 < minerGame.GetLength(1))
                     {
                         startingColumn++;
@@ -97,6 +97,7 @@
                     Environment.Exit(0);
                 }
             }
+            
             //print this message if he has no more moves and there are coals left
             Console.WriteLine($"{coalCounter} coals left. ({startingRow}, {startingColumn})");
         }
